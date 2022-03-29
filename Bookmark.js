@@ -1,7 +1,3 @@
-if (document.readyState == 'loading') {
-  document.addEventListener('DOMContentLoaded', ready)
-}
-
 function ready() {
 
   let carts = document.querySelectorAll('.NoMarked');
@@ -119,6 +115,6 @@ function ready() {
 
 }
 
-
+ready()
 
 
