@@ -1,6 +1,6 @@
 $(function() {
 
-  let carts = document.getElementsByClassName('.NoMarked');
+  let carts = document.querySelectorAll('.NoMarked');
 
   for (let i = 0; i < carts.length; i++) {
       var button = carts[i]
@@ -89,7 +89,7 @@ $(function() {
         displayCart()
   }
   
-  let remcarts = document.getElementsByClassName('.marked');
+  let remcarts = document.querySelectorAll('.marked');
 
   for (let i = 0; i < remcarts.length; i++) {
     var button = remcarts[i]
