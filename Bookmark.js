@@ -92,6 +92,30 @@ function ready() {
         localStorage.setItem("konten", JSON.stringify(taskObj));
         displayCart()
   }
+  
+  let remcarts = document.querySelectorAll('.marked');
+
+  for (let i = 0; i < remcarts.length; i++) {
+    var button = remcarts[i]
+    button.addEventListener('click', () => {
+        console.log('add to carts data');
+        rencat(remcarts[i])
+    })
+}
+
+ var rencat = function (remcarts){
+    var id = remcarts.getAttribute('post-id')
+    console.log(id)
+    removearticle(id)
+ }
+
+  var removearticle = function(id){
+    var konten = getAllkonten();
+    konten = $.grep(konten, function(value, index) {
+      return value.id != id;
+    });
+    setAllkonten(konten);
+  }
 
 }
 
