@@ -9,6 +9,16 @@ $(function() {
           addToCartClicked(carts[i])
       })
   }
+  
+  let remcarts = document.querySelectorAll('.button-subscribe.marked');
+
+  for (let i = 0; i < remcarts.length; i++) {
+    var button = remcarts[i]
+    button.addEventListener('click', () => {
+        console.log('add to carts data');
+        rencat(remcarts[i])
+    })
+}
 
   var addToCartClicked = function(carts) {
           var id = carts.getAttribute('post-id')
@@ -88,16 +98,6 @@ $(function() {
         localStorage.setItem("konten", JSON.stringify(taskObj));
         displayCart()
   }
-  
-  let remcarts = document.querySelectorAll('.button-subscribe.marked');
-
-  for (let i = 0; i < remcarts.length; i++) {
-    var button = remcarts[i]
-    button.addEventListener('click', () => {
-        console.log('add to carts data');
-        rencat(remcarts[i])
-    })
-}
 
  var rencat = function (remcarts){
     var id = remcarts.getAttribute('post-id')
