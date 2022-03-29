@@ -1,15 +1,5 @@
 $(function() {
 
-  let carts = document.querySelectorAll('.button-subscribe.NoMarked');
-
-  for (let i = 0; i < carts.length; i++) {
-      var button = carts[i]
-      button.addEventListener('click', () => {
-          console.log('add to carts data');
-          addToCartClicked(carts[i])
-      })
-  }
-  
   let remcarts = document.querySelectorAll('.button-subscribe.marked');
 
   for (let i = 0; i < remcarts.length; i++) {
@@ -19,6 +9,16 @@ $(function() {
         rencat(remcarts[i])
     })
 }
+  
+  let carts = document.querySelectorAll('.button-subscribe.NoMarked');
+
+  for (let i = 0; i < carts.length; i++) {
+      var button = carts[i]
+      button.addEventListener('click', () => {
+          console.log('add to carts data');
+          addToCartClicked(carts[i])
+      })
+  }
 
   var addToCartClicked = function(carts) {
           var id = carts.getAttribute('post-id')
