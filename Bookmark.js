@@ -60,7 +60,7 @@ function ready() {
           <div class="bs">
           <div data-id="${item.id}" id="${item.id}" class="bsx">
           <div class="delmark">Delete</div>
-          <a href="${item.ling}" title="${item.title}">
+          <a href="${item.link}" title="${item.title}">
           <div class="limit">
           <div class="ply"></div>
           <span class="type"></span>
