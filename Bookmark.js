@@ -1,4 +1,4 @@
-function ready() {
+(function ($) {
 
   let carts = document.querySelectorAll('.NoMarked');
 
@@ -113,8 +113,7 @@ function ready() {
     setAllkonten(konten);
   }
 
-}
-
-ready()
+})(jQuery);
+;
 
 
