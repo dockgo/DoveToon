@@ -1,4 +1,4 @@
-(function() {
+$(function() {
 
   let carts = document.querySelectorAll('.NoMarked');
 
