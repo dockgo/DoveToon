@@ -21,6 +21,25 @@ $(function() {
         }
  
   });
+    
+  $(".marked").click(function()
+    {
+    var $el = $(this);
+    if ( action == 1 ) {
+            var id = $el.data('id');
+            removearticle(id)
+            action = 2;
+        } else {
+          var id = $el.data('id');
+            var title = $el.data('title');
+            var ling = $el.data('link');
+            var borkimage = $el.data('borkimage');;
+            addarticle(id, title, ling, borkimage);
+          
+            action = 1;
+        }
+ 
+  });
   var event = $('.delmark');
 
   $(event).click(function() {
