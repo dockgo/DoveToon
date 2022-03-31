@@ -11,8 +11,9 @@ $(function() {
             var id = $el.data('id');
             var title = $el.data('title');
             var ling = $el.data('link');
-            var borkimage = $el.data('borkimage');;
-            addarticle(id, title, ling, borkimage);
+            var borkimage = $el.data('borkimage');
+            var updated = $el.data('updated');
+            addarticle(id, title, ling, borkimage, updated);
             action = 2;
         } else {
             var id = $el.data('id');
@@ -33,8 +34,9 @@ $(function() {
           var id = $el.data('id');
             var title = $el.data('title');
             var ling = $el.data('link');
-            var borkimage = $el.data('borkimage');;
-            addarticle(id, title, ling, borkimage);
+            var borkimage = $el.data('borkimage');
+            var updated = $el.data('updated');
+            addarticle(id, title, ling, borkimage, updated);
           
             action = 1;
         }
@@ -56,13 +58,14 @@ $(function() {
  var setAllkonten = function(konten){
     localStorage.konten = JSON.stringify(konten);
  }
- var addarticle = function(id, title, ling, borkimage) {
+ var addarticle = function(id, title, ling, borkimage, updated) {
     var konten = getAllkonten();
     konten.push({
     id: id,
     title: title,
     link: ling,
-    borkimage: borkimage
+    borkimage: borkimage,
+    updated: updated
     });
     setAllkonten(konten);
  }
