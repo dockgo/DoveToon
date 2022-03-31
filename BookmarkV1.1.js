@@ -61,7 +61,7 @@ $(function() {
   
     let cartItem = localStorage.getItem("konten");
     cartItem = JSON.parse(cartItem);
-    let productContainer = document.querySelector('#area-Bookmark');
+    let productContainer = document.querySelector('#bookmark-area-badan');
 
     if( cartItem && productContainer ){
         productContainer.innerHTML = '';
