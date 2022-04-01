@@ -42,13 +42,12 @@ $(function() {
         }
  
   });
-  var event = $('.delmark');
+  var event = $('.button-remove');
 
   $(event).click(function() {
-  var test = $(this).closest(".bs")
-  var $el = $(this).closest(".bsx");
+  var $el = $(this).closest(".container-badan-bookmark");
   var id = $el.data("id");
-  test.hide(500, function(){
+  $el.hide(500, function(){
   removearticle(id)
   displayCart()
   });
@@ -90,7 +89,7 @@ $(function() {
         Object.values(cartItem).map(item => {productContainer.innerHTML += `
         <div class="container container-badan-bookmark" data-id="${item.id}">
  <div class="container container-badan-bookmark-v1">
-  <div tabindex="0" class="container container-badan-post" style="opacity: 1; transform: scale(1);">
+  <a href="${item.link}" tabindex="0" class="container container-badan-post" style="opacity: 1; transform: scale(1);">
    <div class="container area-thumbnail">
     <div class="container area-thumbnail-v1">
      <div class="container thumbnail-post">
@@ -102,7 +101,7 @@ $(function() {
      </div>
     </div>
    </div>
-  </div>
+  </a>
     <div class="container pembatas-16x16"></div>
    <div class="container info-post-in-bookmark">
     <h6 aria-level="6" dir="auto" role="heading" class="css-post-bookmark">${item.title}</h6>
