@@ -89,7 +89,7 @@ $(function() {
         Object.values(cartItem).map(item => {productContainer.innerHTML += `
         <div class="container container-badan-bookmark" data-id="${item.id}">
  <div class="container container-badan-bookmark-v1">
-  <a href="${item.link}" tabindex="0" class="container container-badan-post" style="opacity: 1; transform: scale(1);">
+  <div href="${item.link}" tabindex="0" class="container container-badan-post" style="opacity: 1; transform: scale(1);">
    <div class="container area-thumbnail">
     <div class="container area-thumbnail-v1">
      <div class="container thumbnail-post">
@@ -101,12 +101,12 @@ $(function() {
      </div>
     </div>
    </div>
-  </a>
+  </div>
     <div class="container pembatas-16x16"></div>
    <div class="container info-post-in-bookmark">
     <h6 aria-level="6" dir="auto" role="heading" class="css-post-bookmark">${item.title}</h6>
     <div class="container pembatas-8x8"></div>
-    <div dir="auto" class="css-updated-post">Updated 2022-03-31</div>
+    <div dir="auto" class="css-updated-post">${item.updated}</div>
     <div class="container pembatas-8x8"></div>
     <div dir="auto" class="css-sinopsi"></div>
         </div>
