@@ -89,8 +89,7 @@ $(function() {
         Object.values(cartItem).map(item => {productContainer.innerHTML += `
         <div class="container container-badan-bookmark" data-id="${item.id}">
  <div class="container container-badan-bookmark-v1">
-  <div tabindex="0" class="container container-badan-post" style="opacity: 1; transform: scale(1);">
-  <a href="${item.link}">
+  <a href="${item.link}" tabindex="0" class="container container-badan-post" style="opacity: 1; transform: scale(1);">
    <div class="container area-thumbnail">
     <div class="container area-thumbnail-v1">
      <div class="container thumbnail-post">
@@ -102,7 +101,6 @@ $(function() {
      </div>
     </div>
    </div>
-   </a>
   </div>
     <div class="container pembatas-16x16"></div>
    <div class="container info-post-in-bookmark">
@@ -112,7 +110,7 @@ $(function() {
     <div class="container pembatas-8x8"></div>
     <div dir="auto" class="css-sinopsi"></div>
         </div>
-  </div>
+  </a>
   <div class="container pembatas-16x16"></div>
   <div tabindex="0" class="container button-remove" style="opacity: 1; padding: 4px; transform: scale(1);">
    <svg fill="#242424" height="28" viewBox="0 0 20 20" width="28" class="r-1q142lx"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.96968 14.9697L5.03034 16.0303L10 11.0607L14.9697 16.0303L16.0303 14.9697L11.0607 10L16.0303 5.03033L14.9697 3.96967L10 8.93934L5.03034 3.96968L3.96968 5.03033L8.93935 10L3.96968 14.9697Z"></path></svg>
