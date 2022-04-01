@@ -50,6 +50,7 @@ $(function() {
   $el.hide(500, function(){
   removearticle(id)
   displayCart()
+  localStorage.removeItem(`post-${id}`);
   });
   });
  });
